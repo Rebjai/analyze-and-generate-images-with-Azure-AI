@@ -22,4 +22,10 @@ function analyzeImage(imgURL) {
         .then(response => response.json())
         .then(json => json)
 }
+
+function isConfigured(){
+    //check if variables are set
+    return process.env.REACT_APP_VISION_KEY && process.env.REACT_APP_VISION_ENDPOINT;
+}
 export default analyzeImage
+export {isConfigured}
